@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='delete.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section id="main">
+        <nav>
+            <a href="/">Introduction</a>
+            <a href="/create">Create</a>
+            <a href="/delete">Delete</a>
+            <a href="/update">Update</a>
+        </nav>
+        <section id="data">
+            <h1>Delete user</h1>
+            <form action="" method="POST">
+                <input type="text" name="id" placeholder="User number">
+                <input type="submit" value="Delete" id="deleteButton">
+            </form>
+        </section>
+    </section>
+</body>
+</html>

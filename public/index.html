@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section id="main">
+        <nav>
+            <a href="/">Introduction</a>
+            <a href="/create">Create</a>
+            <a href="/delete">Delete</a>
+            <a href="/update">Update</a>
+        </nav>
+        <section>
+            <div id="nombres">
+                {% if not datos %} 
+                    <p id="advice">No hay datos</p>
+                {% else %}
+                    {% for nombre in datos %}
+                    <div class="card">
+                        <div id="dataCard">
+                            <p>Number: {{nombre[0]}}</p>
+                            <p>Name: {{nombre[1]}}</p>
+                        </div>
+                        <div id="conteinerImg">
+                            <img src="{{nombre[2]}}" alt="">
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </section>
+    </section>
+</body>
+</html>
